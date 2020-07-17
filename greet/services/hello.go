@@ -18,7 +18,7 @@ func (h *Hello) Ping(ctx context.Context, req *proto.Request, res *proto.Respons
 func main() {
 	registry := etcdv3.NewRegistry()
 	service := micro.NewService(
-		micro.Name("helloSRV"), // 服务名称
+		micro.Name("hello"), // 服务名称
 		micro.Registry(registry),
 	)
 	service.Init()
